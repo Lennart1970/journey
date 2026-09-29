@@ -179,11 +179,9 @@ a{color:var(--accent)}
 .spear{position:relative}
 .spear .accent-row{position:absolute;top:12px;right:12px;float:none;width:104px;margin:0;z-index:1}
 .spear .accent-row .accent{position:static;width:52px;margin:0}
-.spear:has(.accent-row) h3,.spear:has(.accent-row) p{padding-right:96px}
 @media (min-width:720px){
   .mini .accent{width:88px}
   .card.big:has(> .accent) .bighead{padding-right:140px}
   .spear .accent-row{width:104px;top:14px;right:12px}
   .spear .accent-row .accent{width:52px}
-  .spear:has(.accent-row) h3,.spear:has(.accent-row) p{padding-right:100px}
 }
