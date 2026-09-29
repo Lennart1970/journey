@@ -137,3 +137,35 @@ a{color:var(--accent)}
   .hero-media img{border-radius:24px;box-shadow:var(--shadow);border:1px solid var(--line)}
   .hero-media+.hero{padding-top:34px}
 }
+
+/* decorative accents */
+.accent{float:right;width:84px;margin:0 0 4px 12px}
+.accent img{display:block;width:100%;height:auto}
+.accent-row{float:right;display:flex;width:168px;margin:0 0 4px 10px}
+.accent-row .accent{float:none;width:84px;margin:0}
+.card:has(.accent)::after{content:"";display:block;clear:both}
+.hero{position:relative}
+.hero .accent{position:absolute;top:64px;right:0;float:none;width:62px;margin:0}
+.hero h1,.hero .lead{padding-right:74px}
+.card.layer{position:relative}
+.layer .accent,.layer .accent-row{position:absolute;top:16px;right:14px;float:none;margin:0;z-index:1}
+.layer .accent{width:68px}
+.layer .accent-row{width:116px}
+.layer .accent-row .accent{position:static;width:58px}
+.layer:has(.accent) .tag,.layer:has(.accent) h3,.layer:has(.accent) p{padding-right:78px}
+.layer:has(.accent-row) .tag,.layer:has(.accent-row) h3,.layer:has(.accent-row) p{padding-right:124px}
+@media (min-width:720px){
+  .accent{width:120px;margin-left:18px}
+  .hero .accent{width:116px;top:76px}
+  .hero h1,.hero .lead{padding-right:136px}
+  .layer .accent{width:112px;top:22px;right:22px}
+  .layer .accent-row{width:196px;top:18px;right:18px}
+  .layer .accent-row .accent{position:static;width:98px}
+  .layer:has(.accent) .tag,.layer:has(.accent) h3,.layer:has(.accent) p{padding-right:128px}
+  .layer:has(.accent-row) .tag,.layer:has(.accent-row) h3,.layer:has(.accent-row) p{padding-right:206px}
+}
+@media (max-width:719px){
+  .hero .accent{top:-2px;width:48px}
+  .hero .eyebrow{display:block;padding-right:76px}
+  .hero h1,.hero .lead{padding-right:0}
+}
