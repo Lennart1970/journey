@@ -28,6 +28,7 @@ section{margin-top:56px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
 .card p,.card li{color:var(--muted)}
 .card strong{color:var(--ink)}
+.card.big:has(> .accent) .bighead{padding-right:96px}
 .spear{position:relative}
 .num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--soft);color:var(--accent);font-weight:750;margin-bottom:12px}
 .spear h3{hyphens:manual}
@@ -146,7 +147,7 @@ a{color:var(--accent)}
 .card:has(.accent)::after{content:"";display:block;clear:both}
 .hero{position:relative}
 .hero .accent{position:absolute;top:64px;right:0;float:none;width:62px;margin:0}
-.hero h1,.hero .lead{padding-right:74px}
+.hero:has(.accent) h1,.hero:has(.accent) .lead{padding-right:74px}
 .card.layer{position:relative}
 .layer .accent,.layer .accent-row{position:absolute;top:16px;right:14px;float:none;margin:0;z-index:1}
 .layer .accent{width:68px}
@@ -157,7 +158,7 @@ a{color:var(--accent)}
 @media (min-width:720px){
   .accent{width:120px;margin-left:18px}
   .hero .accent{width:116px;top:76px}
-  .hero h1,.hero .lead{padding-right:136px}
+  .hero:has(.accent) h1,.hero:has(.accent) .lead{padding-right:136px}
   .layer .accent{width:112px;top:22px;right:22px}
   .layer .accent-row{width:196px;top:18px;right:18px}
   .layer .accent-row .accent{position:static;width:98px}
@@ -165,7 +166,24 @@ a{color:var(--accent)}
   .layer:has(.accent-row) .tag,.layer:has(.accent-row) h3,.layer:has(.accent-row) p{padding-right:206px}
 }
 @media (max-width:719px){
-  .hero .accent{top:-2px;width:48px}
-  .hero .eyebrow{display:block;padding-right:76px}
-  .hero h1,.hero .lead{padding-right:0}
+  .hero:has(.accent) .accent{top:-2px;width:48px}
+  .hero:has(.accent) .eyebrow{display:block;padding-right:76px}
+  .hero:has(.accent) h1,.hero:has(.accent) .lead{padding-right:0}
+}
+
+.with-accent{display:flow-root}
+.with-accent>.accent{margin-top:2px}
+.mini:has(.accent),.highlight:has(.accent){display:flow-root}
+.mini .accent{width:68px}
+.card.big:has(> .accent) .bighead{padding-right:96px}
+.spear{position:relative}
+.spear .accent-row{position:absolute;top:12px;right:12px;float:none;width:104px;margin:0;z-index:1}
+.spear .accent-row .accent{position:static;width:52px;margin:0}
+.spear:has(.accent-row) h3,.spear:has(.accent-row) p{padding-right:96px}
+@media (min-width:720px){
+  .mini .accent{width:88px}
+  .card.big:has(> .accent) .bighead{padding-right:140px}
+  .spear .accent-row{width:104px;top:14px;right:12px}
+  .spear .accent-row .accent{width:52px}
+  .spear:has(.accent-row) h3,.spear:has(.accent-row) p{padding-right:100px}
 }
