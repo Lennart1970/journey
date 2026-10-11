@@ -74,6 +74,17 @@ footer{padding:32px 0;font-size:.9rem;color:var(--mokka)}
   .signup dl{grid-template-columns:1fr}
   .signup dt{margin-top:8px}
 }
+.step.groups-step{grid-template-columns:110px 1fr}
+.groups{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gcard{position:relative;background:#fff8ee;padding:12px 12px 14px;box-shadow:6px 5px 0 var(--mokka)}
+.gcard:nth-child(2){box-shadow:6px 5px 0 var(--roze)}.gcard:nth-child(3){box-shadow:6px 5px 0 var(--denim)}.gcard:nth-child(4){box-shadow:6px 5px 0 var(--rood)}
+.gcard img{width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:8px}
+.gcard h4{font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem;margin:0 0 .2em;line-height:1.2}
+.gcard p{font-size:.95rem;margin:0}
+.gnum{position:absolute;top:4px;left:4px;background:var(--geel);font-family:'Space Mono',monospace;font-weight:700;width:30px;height:30px;display:grid;place-items:center}
+@media (max-width:1000px){.groups{grid-template-columns:1fr 1fr}}
+@media (max-width:820px){.step.groups-step{grid-template-columns:1fr}}
+@media (max-width:480px){.groups{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -90,13 +101,13 @@ footer{padding:32px 0;font-size:.9rem;color:var(--mokka)}
 <div class="hero-card">
   <p class="mono">Workshop · zondag 7 februari 2027</p>
   <h1>Van schaap tot vilt</h1>
-  <p class="lead">Eén dag op de boerderij: van het scheren van het schaap tot een stuk vilt in je handen. En daarna: hoe je met wol een extra inkomstenbron en samenwerking opbouwt.</p>
+  <p class="lead">Eén dag op de boerderij: van het scheren van het schaap tot zelf vilten in kleine groepen. En je hoort hoe je met wol een extra inkomstenbron en samenwerking opbouwt.</p>
   <ul class="facts">
     <li>7 februari 2027</li>
     <li>Boerderij Wennekers</li>
     <li>Biologisch · niet gedipt</li>
-    <li class="ph">[prijs volgt]</li>
-    <li class="ph">[aantal plekken volgt]</li>
+    <li>€75 p.p. · hele dag incl. lunch</li>
+    <li>15–20 deelnemers</li>
   </ul>
   <a class="btn ph" href="#aanmelden" aria-disabled="true">Aanmelden [link volgt]</a>
 </div>
@@ -123,12 +134,15 @@ footer{padding:32px 0;font-size:.9rem;color:var(--mokka)}
    <li class="step"><div class="time">10:45<small>voorlopig</small></div><div><h3>Wol sorteren</h3><p>Welke wol is geschikt voor vilt, en welke gaat de grond in?</p></div><figure><img src="assets/vette-wol-closeup.jpg" alt="Close-up van vette ruwe wol"><figcaption>vette wol</figcaption></figure></li>
    <li class="step"><div class="time">11:15<small>voorlopig</small></div><div><h3>De weide en de wolversnipperaar</h3><p>Bezoek aan de weide waar wol is ingebracht, plus een demonstratie van de wolversnipperaar met de precieze instellingen.</p></div><figure><img src="assets/wolversnipperaar.jpg" alt="Versnipperde wol vliegt door een schuur met betonnen wanden; op de vloer liggen plukken wol" style="aspect-ratio:3/4;object-position:50% 30%"><figcaption>wolversnipperaar in de schuur</figcaption></figure></li>
    <li class="step noimg"><div class="time">12:15<small>voorlopig</small></div><div><h3>Lunch</h3><p class="ph-txt">[details lunch volgen]</p></div></li>
-   <li class="step"><div class="time">13:00<small>voorlopig</small></div><div><h3>Ultrasoon wolwassen</h3><p>De juiste temperatuur, de enzymsamenstelling en de juiste leverancier.</p></div><figure><img src="assets/wash-tubs.jpg" alt="Wasbakken met wol"><figcaption>wasbakken</figcaption></figure></li>
-   <li class="step"><div class="time">14:00<small>voorlopig</small></div><div><h3>Drogen en kaarden</h3><p>Van natte wol naar een luchtig vlies.</p></div><figure><img src="assets/kaarden.jpg" alt="Kaardmachine met wol"><figcaption>kaarden</figcaption></figure></li>
-   <li class="step"><div class="time">14:30<small>voorlopig</small></div><div><h3>Vilten met de Feltcraft needle felter</h3><p>Je ziet hoe de machine van vlies vilt maakt.</p></div><figure><img src="assets/feltcrafts-machine.jpg" alt="Feltcraft needle felter in een schuur"><figcaption>Feltcraft needle felter</figcaption></figure></li>
-   <li class="step"><div class="time">15:15<small>voorlopig</small></div><div><h3>Lezing: opschalen en toepassingen</h3><p>Van vilt naar producten zoals de sneaker, en hoe je dit opschaalt.</p></div><figure><img src="assets/sneaker.jpg" alt="Sneaker"><figcaption>toepassing: sneaker</figcaption></figure></li>
-   <li class="step"><div class="time">16:00<small>voorlopig</small></div><div><h3>Lezing: verdien- en samenwerkingsmodellen</h3><p>Hoe wol een extra geldstroom wordt, en hoe je samenwerkt in een coöperatie.</p></div><figure><img src="assets/felt_1.jpg" alt="Een stuk vilt"><figcaption>vilt</figcaption></figure></li>
-   <li class="step noimg"><div class="time">16:45<small>voorlopig</small></div><div><h3>Afsluiting en borrel</h3></div></li>
+   <li class="step"><div class="time">13:00<small>voorlopig</small></div><div><h3>Gezamenlijke uitleg van de machines</h3><p>Samen langs de machines: ultrasoon wassen, kaarden en de vilters. Daarna weet je wat elke stap doet.</p></div><figure><img src="assets/wash-tubs.jpg" alt="Wasbakken met wol"><figcaption>wasbakken</figcaption></figure></li>
+   <li class="step groups-step"><div class="time">13:45<small>tot 16:00 · voorlopig</small></div><div><h3>Werken in roulerende groepen</h3><p>Je werkt in 3 à 4 groepen en rouleert langs alle onderdelen.</p></div>
+    <div class="groups">
+     <div class="gcard"><img src="assets/sneaker.jpg" alt="Sneaker van vilt"><span class="gnum">1</span><h4>Lezing</h4><p>Opschalen, plus verdien- en samenwerkingsmodellen.</p></div>
+     <div class="gcard"><img src="assets/feltcrafts-machine.jpg" alt="Feltcraft needle felter in een schuur"><span class="gnum">2</span><h4>Grote vilter</h4><p>Vilten met de Feltcraft needle felter.</p></div>
+     <div class="gcard"><img src="assets/felt_1.jpg" alt="Een stuk vilt"><span class="gnum">3</span><h4>De 2 kleine vilters</h4><p>Zelf vilt maken op de kleine machines.</p></div>
+     <div class="gcard"><img src="assets/kaarden.jpg" alt="Kaardmachine met wol"><span class="gnum">4</span><h4>Wassen en kaarden</h4><p>Van vette wol naar een luchtig vlies.</p></div>
+    </div></li>
+   <li class="step noimg"><div class="time">16:15<small>voorlopig</small></div><div><h3>Afsluiting en borrel</h3></div></li>
   </ol>
  </div>
 </section>
@@ -150,8 +164,8 @@ footer{padding:32px 0;font-size:.9rem;color:var(--mokka)}
    <dl>
     <dt>Datum</dt><dd>Zondag 7 februari 2027</dd>
     <dt>Locatie</dt><dd>Boerderij Wennekers · <span class="ph-txt">[adres volgt]</span></dd>
-    <dt>Prijs</dt><dd><span class="ph-txt">[prijs volgt]</span></dd>
-    <dt>Plekken</dt><dd><span class="ph-txt">[aantal plekken volgt]</span></dd>
+    <dt>Prijs</dt><dd>€75 per persoon voor de hele dag, inclusief lunch</dd>
+    <dt>Plekken</dt><dd>15–20 deelnemers</dd>
    </dl>
    <a class="btn ph" href="#aanmelden" aria-disabled="true">Aanmelden [link volgt]</a>
   </div>
